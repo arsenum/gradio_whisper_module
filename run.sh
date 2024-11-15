@@ -1,3 +1,5 @@
+# docker-compose up --build
+# exit
 # docker-compose up -d
 # webhook -hooks hooks.json -verbose &
 # lt --port 9000
@@ -15,7 +17,7 @@ while true; do
   sleep 1
 done
 
-# docker-compose down --build 
+ 
 #  exit
 # output=$(echo "$(bacalhau docker run --network=Full --entrypoint=./run_app.sh --env \"CALL_BACK=$CALL_BACK\"  arsen3d/gradio_whisper:latest)" | tail -n 1)
 # echo $output

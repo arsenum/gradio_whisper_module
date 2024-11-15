@@ -1,0 +1,11 @@
+# version: 3.8
+
+services:
+  gradio:
+    image: arsen3d/gradio_whisper:latest
+    build: ./app
+    working_dir: /app
+    entrypoint: ./run_app.sh
+    # command: python run_app.py
+    environment:
+      - CALL_BACK

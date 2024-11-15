@@ -1,0 +1,35 @@
+{
+  "machine": {
+    "gpu": 1,
+    "cpu": 1000,
+    "ram": 100
+  },
+  "job": {
+    "APIVersion": "V1beta1",
+    "Spec": {
+      "Deal": {
+        "Concurrency": 1
+      },
+      "Docker": {
+        "Entrypoint": [
+          "./run_app.sh"
+          ],
+        "Image": "arsen3d/gradio_whisper:latest"
+        "EnvironmentVariables": [
+          "CALL_BACK={{.CALL_BACK}}"
+      },
+      "Engine": "Docker",
+      "Network": {
+        "Type": "Full"
+      },
+      "PublisherSpec": {
+        "Type": "IPFS"
+      },
+      "Resources": {
+        "GPU": "1"
+      },
+      "Timeout": 1800,
+      "Verifier": "Noop"
+    }
+  }
+}

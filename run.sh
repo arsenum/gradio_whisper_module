@@ -20,7 +20,7 @@ done
 # output=$(echo "$(bacalhau docker run --network=Full --entrypoint=./run_app.sh --env \"CALL_BACK=$CALL_BACK\"  arsen3d/gradio_whisper:latest)" | tail -n 1)
 # echo $output
 rm -rf /tmp/lilypad/data/repos/arsenum/gradio_whisper_module
-lilypad run github.com/arsenum/gradio_whisper_module:main --target 0x6519E04dEb2793F07b1b4756c922777F45B78880 -i ENV="CALL_BACK=$CALL_BACK"
+lilypad run github.com/arsenum/gradio_whisper_module:main --target 0x6519E04dEb2793F07b1b4756c922777F45B78880 --web3-private-key=$WEB3_USER_PRIVATE_KEY -i ENV="CALL_BACK=$CALL_BACK"
 exit
 # last_line=$(echo "$(output)")
 # echo $("$output")
